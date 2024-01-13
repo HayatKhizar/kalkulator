@@ -6,7 +6,12 @@ const config: CapacitorConfig = {
   webDir: 'www',
   server: {
     androidScheme: 'https'
-  }
+  },
+  plugins: {
+    CapacitorSQLite: {
+      syncDatebase: true,
+    },
+  },
 };
 
 export default config;

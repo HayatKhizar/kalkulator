@@ -1,0 +1,23 @@
+<!-- history-modal.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      History
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="historyEntries && historyEntries.length > 0">
+    <ion-item *ngFor="let entry of historyEntries">
+      {{ entry }}
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="clearHistory()">Clear History</ion-button>
+</ion-content>

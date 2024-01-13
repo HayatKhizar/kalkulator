@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'history-modal',
+    loadChildren: () => import('./history-modal/history-modal.module').then( m => m.HistoryModalPageModule)
+  },
 ];
 
 @NgModule({
